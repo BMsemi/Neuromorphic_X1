@@ -1,42 +1,37 @@
 // ------------------------------------------------------------
-// Digital-compatible behavioral model of a 32x32 1T1R RRAM array
-// Designed for functional simulation of memory arrays
+// Digital behavioral model of a 32x32 1T1R RRAM crossbar array
+// For digital/functional simulation of memory
+//
+// - Each row shares WL and SL (horizontal selection)
+// - Each column has a unique BL (vertical, readout)
 // 
-// - Each bitcell consists of a resistive memory (RRAM) and a select transistor
-// - WL: activates access transistor (gate)
-// - SL: source line used to write data (SET/RESET)
-// - BL: bitline read out (grounded by sense amp during read)
-// 
-// Operation:
-// - Write '1': WL=1, SL=1, BL=0 → SET (low resistance)
-// - Write '0': WL=1, SL=0, BL=0 → RESET (high resistance)
-// - Read: WL=1, SL=1, BL is sensed → if memory=1, SL drives BL low
-// 
-// Note: This model is simplified for digital simulation only.
-// It does not simulate physical behavior or analog dynamics.
+// Cell operation:
+// - SET (write '1'): WL=1, SL=1 (voltage), BL=0 (grounded)
+// - RESET (write '0'): WL=1, SL=0 (grounded), BL=1 (voltage)
+// - READ: WL=1, SL=1, BL sensed by sense amp
+//
+// Note: Digital-only, does not model analog effects
 // ------------------------------------------------------------
 
-// Digital-compatible binary 1T1R cell with correct selection scheme
 module rram_access_cell(WL, SL, BL);
-    input WL;         // Word Line: activates transistor gate
-    input SL;         // Source Line: applies voltage for read/write
-    inout BL;         // Bit Line: grounded by sense amplifier during read
+    input WL;   // Word Line: selects the row
+    input SL;   // Source Line: provides voltage or ground (row)
+    inout BL;   // Bit Line: sense or write voltage (column)
 
-    reg memory_state; // 1: Low Resistance (ON), 0: High Resistance (OFF)
+    reg memory_state; // 1: SET (ON), 0: RESET (OFF)
 
-    // Reading: Cell pulls BL line low if selected and ON
+    // During read, if selected and ON, SL pulls BL low; else high-Z
     assign BL = (WL && memory_state) ? SL : 1'bz;
 
     always @(posedge WL) begin
-        // Write behavior: SL driven high externally to set the cell to ON state
+        // SET: SL=1, BL=0; RESET: SL=0, BL=1 (on selected row/col)
         if (SL && (BL === 1'b0))
-            memory_state <= 1'b1;  // SET operation
-        else if (!SL && (BL === 1'b0))
-            memory_state <= 1'b0;  // RESET operation
+            memory_state <= 1'b1;      // SET
+        else if (!SL && (BL === 1'b1))
+            memory_state <= 1'b0;      // RESET
     end
 endmodule
 
-// Top-level custom digital crossbar array
 module crossbar32x32(WL, SL, BL);
     input [31:0] WL;
     input [31:0] SL;
