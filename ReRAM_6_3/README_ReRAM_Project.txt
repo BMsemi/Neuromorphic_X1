@@ -30,7 +30,7 @@ This project models and simulates a behavioral ReRAM memory array connected to a
   - Write: Adds fixed latency of 10 cycles for 1 data to be written to the Crossbar Array after 'EN' Signal goes LOW
   - Read: Adds fixed latency of 44 cycles and holds read data for 1 cycles
   - Acknowledges completion via `func_ack`
-  - Note: Until all the datas are written to the Crossbar Array the used should not initiate any transaction
+  - Note: Until all the datas are written to the Crossbar Array the user should not initiate any transaction
 	
 ---
 
