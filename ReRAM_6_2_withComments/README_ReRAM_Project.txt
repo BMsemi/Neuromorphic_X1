@@ -40,7 +40,7 @@ This project models and simulates a behavioral ReRAM memory array connected to a
 ### Steps:
 
 1. Launch QuestaSim/ModelSim
-2. In transcript type `cd {" File's Location "}`
+2. In transcript type `cd {" File's Path "}`
 3. Type `do run.do`
 2. Run's the `run.do` script from the simulation terminal:
 
