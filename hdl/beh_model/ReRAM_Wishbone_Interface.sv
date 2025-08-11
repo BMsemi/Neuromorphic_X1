@@ -30,7 +30,8 @@ module ReRAM_Wishbone_Interface (
   output logic [31:0] wbs_dat_o,    // Wishbone read data output
 
   // Analog power/IO pins (to be driven in top-level SoC integration or testbench)
-  input  logic VDD,
+  input  logic VDDC,
+  input  logic VDDA,
   input  logic VSS,
   input  logic Iref,
   input  logic Vbias,
@@ -101,7 +102,8 @@ module ReRAM_Wishbone_Interface (
     .func_ack      (func_ack),
 
     // Analog signals
-    .VDD           (VDD),
+    .VDDC          (VDDC),
+    .VDDA          (VDDA),
     .VSS           (VSS),
     .Iref          (Iref),
     .Vbias         (Vbias),

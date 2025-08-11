@@ -47,7 +47,8 @@ module NEUROMORPHIC_X1 (
     output logic        ScanOutCC,
     
     // Analog / Power Pins
-    input  logic        VDD,
+    input  logic        VDDC,
+    input  logic        VDDA,
     input  logic        VSS,
     input  logic        Iref,
     input  logic        Vbias,
@@ -83,7 +84,8 @@ module NEUROMORPHIC_X1 (
         .ScanInDR(ScanInDR),
         .ScanOutCC(ScanOutCC),
 
-        .VDD(VDD),
+        .VDDC(VDDC),
+        .VDDA(VDDA),
         .VSS(VSS),
         .Iref(Iref),
         .Vbias(Vbias),

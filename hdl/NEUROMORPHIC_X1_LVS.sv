@@ -30,7 +30,7 @@
 module NEUROMORPHIC_X1 (
   DO, AD, DI, SEL, CLKin, RSTin, EN, R_WB, func_ack,
   TM, SM, ScanInCC, ScanInDL, ScanInDR, ScanOutCC,
-  VDD, VSS, Iref, Vbias, Vcomp, Bias_comp1, Bias_comp2, Ramp,
+  VDDC, VDDA, VSS, Iref, Vbias, Vcomp, Bias_comp1, Bias_comp2, Ramp,
   Vcc_L, Vcc_Body, VCC_reset, VCC_set, VCC_wl_reset, VCC_wl_set, VCC_wl_read, VCC_read
 );
 
@@ -51,7 +51,8 @@ module NEUROMORPHIC_X1 (
   input         ScanInDR;
   output        ScanOutCC;
 
-  input         VDD;
+  input         VDDC;
+  input         VDDA;
   input         VSS;
   input         Iref;
   input         Vbias;
@@ -111,7 +112,8 @@ module NEUROMORPHIC_X1 (
     .ScanInDR(ScanInDR),
     .ScanOutCC(ScanOutCC),
 
-    .VDD(VDD),
+    .VDDC(VDDC),
+    .VDDA(VDDA),
     .VSS(VSS),
     .Iref(Iref),
     .Vbias(Vbias),

@@ -47,7 +47,8 @@ module NEUROMORPHIC_X1_macro (
     output logic        ScanOutCC,
 
     // Analog / Power signals
-    input  logic        VDD,
+    input  logic        VDDC,
+    input  logic        VDDA,
     input  logic        VSS,
     input  logic        Iref,
     input  logic        Vbias,
