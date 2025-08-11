@@ -28,42 +28,42 @@
 `timescale 1 ns / 1 ps
 
 module NEUROMORPHIC_X1 (
-    input  logic        CLKin,        // Clock input
-    input  logic        RSTin,        // Asynchronous active-low reset
-    input  logic        EN,           // Enable from Wishbone interface
-    input  logic        R_WB,         // 1 = Read, 0 = Write
-    input  logic [31:0] DI,           // Wishbone write data
-    input  logic [31:0] AD,           // Wishbone address
-    input  logic [3:0]  SEL,          // Byte select from Wishbone
-    output logic [31:0] DO,           // Output read data
-    output logic        func_ack,     // Acknowledge signal to Wishbone slave
+    input         CLKin,        // Clock input
+    input         RSTin,        // Asynchronous active-low reset
+    input         EN,           // Enable from Wishbone interface
+    input         R_WB,         // 1 = Read, 0 = Write
+    input  [31:0] DI,           // Wishbone write data
+    input  [31:0] AD,           // Wishbone address
+    input  [3:0]  SEL,          // Byte select from Wishbone
+    output [31:0] DO,           // Output read data
+    output        func_ack,     // Acknowledge signal to Wishbone slave
 
     // Test and scan inputs (unused here)
-    input  logic        TM,
-    input  logic        SM,
-    input  logic        ScanInCC,
-    input  logic        ScanInDL,
-    input  logic        ScanInDR,
-    output logic        ScanOutCC,
-    
+    input         TM,
+    input         SM,
+    input         ScanInCC,
+    input         ScanInDL,
+    input         ScanInDR,
+    output        ScanOutCC,
+
     // Analog / Power Pins
-    input  logic        VDDC,
-    input  logic        VDDA,
-    input  logic        VSS,
-    input  logic        Iref,
-    input  logic        Vbias,
-    input  logic        Vcomp,
-    input  logic        Bias_comp1,
-    input  logic        Bias_comp2,
-    input  logic        Ramp,
-    input  logic        Vcc_L,
-    input  logic        Vcc_Body,
-    input  logic        VCC_reset,
-    input  logic        VCC_set,
-    input  logic        VCC_wl_reset,
-    input  logic        VCC_wl_set,
-    input  logic        VCC_wl_read,
-    input  logic        VCC_read
+    input         VDDC,
+    input         VDDA,
+    input         VSS,
+    input         Iref,
+    input         Vbias,
+    input         Vcomp,
+    input         Bias_comp1,
+    input         Bias_comp2,
+    input         Ramp,
+    input         Vcc_L,
+    input         Vcc_Body,
+    input         VCC_reset,
+    input         VCC_set,
+    input         VCC_wl_reset,
+    input         VCC_wl_set,
+    input         VCC_wl_read,
+    input         VCC_read
 );
 
     NEUROMORPHIC_X1_macro NEUROMORPHIC_X1_inst (

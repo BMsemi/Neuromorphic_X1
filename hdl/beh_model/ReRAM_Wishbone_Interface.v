@@ -8,7 +8,7 @@
 // reproduction or transfer of this program is strictly prohibited unless written authorization
 // from Klok Systems. (c) 2019 Klok Systems India Private Limited - All Rights Reserved
 //--------------------------------------------------------------------------------------------------
-// FILE NAME     : ReRAM_Wishbone_Interface.sv
+// FILE NAME     : ReRAM_Wishbone_Interface.v
 //--------------------------------------------------------------------------------------------------
 // Description:
 //   Top-level wrapper that integrates the Wishbone protocol handler (slave interface)
@@ -18,49 +18,49 @@
 `timescale 1ns / 1ps
 
 module ReRAM_Wishbone_Interface (
-  input  logic        wb_clk_i,     // Wishbone clock
-  input  logic        wb_rst_i,     // Wishbone reset (active low)
-  input  logic        wbs_stb_i,    // Wishbone strobe
-  input  logic        wbs_cyc_i,    // Wishbone cycle indicator
-  input  logic        wbs_we_i,     // Wishbone write enable: 0=write, 1=read
-  input  logic [3:0]  wbs_sel_i,    // Wishbone byte select
-  input  logic [31:0] wbs_dat_i,    // Wishbone write data
-  input  logic [31:0] wbs_adr_i,    // Wishbone address
-  output logic        wbs_ack_o,    // Wishbone acknowledge output
-  output logic [31:0] wbs_dat_o,    // Wishbone read data output
+  input         wb_clk_i,     // Wishbone clock
+  input         wb_rst_i,     // Wishbone reset (active low)
+  input         wbs_stb_i,    // Wishbone strobe
+  input         wbs_cyc_i,    // Wishbone cycle indicator
+  input         wbs_we_i,     // Wishbone write enable: 0=write, 1=read
+  input  [3:0]  wbs_sel_i,    // Wishbone byte select
+  input  [31:0] wbs_dat_i,    // Wishbone write data
+  input  [31:0] wbs_adr_i,    // Wishbone address
+  output [31:0] wbs_dat_o,    // Wishbone read data output
+  output        wbs_ack_o,    // Wishbone acknowledge output
 
-  // Analog power/IO pins (to be driven in top-level SoC integration or testbench)
-  input  logic VDDC,
-  input  logic VDDA,
-  input  logic VSS,
-  input  logic Iref,
-  input  logic Vbias,
-  input  logic Vcomp,
-  input  logic Bias_comp1,
-  input  logic Bias_comp2,
-  input  logic Ramp,
-  input  logic Vcc_L,
-  input  logic Vcc_Body,
-  input  logic VCC_reset,
-  input  logic VCC_set,
-  input  logic VCC_wl_reset,
-  input  logic VCC_wl_set,
-  input  logic VCC_wl_read,
-  input  logic VCC_read
+  // Analog power/IO pins
+  input         VDDC,
+  input         VDDA,
+  input         VSS,
+  input         Iref,
+  input         Vbias,
+  input         Vcomp,
+  input         Bias_comp1,
+  input         Bias_comp2,
+  input         Ramp,
+  input         Vcc_L,
+  input         Vcc_Body,
+  input         VCC_reset,
+  input         VCC_set,
+  input         VCC_wl_reset,
+  input         VCC_wl_set,
+  input         VCC_wl_read,
+  input         VCC_read
 );
 
   //------------------------------------------------------------------------------------------
-  // Internal interconnect wires between Wishbone slave and functional block
+  // Internal interconnect wires
   //------------------------------------------------------------------------------------------
-  logic        EN;         // Enable signal for ReRAM operation
-  logic        R_WB;       // Read/Write control: 1 = read, 0 = write
-  logic        func_ack;   // Acknowledge from ReRAM block
-  logic [31:0] DO;         // Data output from ReRAM block
-  logic [3:0]  SEL;        // Byte select
-  logic        CLKin;      // Clock routed to internal modules
-  logic        RSTin;      // Reset routed to internal modules
-  logic [31:0] DI;         // Data input to ReRAM functional block
-  logic [31:0] AD;         // Address to ReRAM block
+  wire        EN;
+  wire        R_WB;
+  wire        func_ack;
+  wire [31:0] DO;
+  wire [3:0]  SEL;
+  wire        CLKin;
+  wire        RSTin;
+  wire [31:0] DI;
+  wire [31:0] AD;
 
   //------------------------------------------------------------------------------------------
   // Wishbone Slave Interface Instantiation

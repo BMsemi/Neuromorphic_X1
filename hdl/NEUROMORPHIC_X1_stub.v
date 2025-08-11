@@ -28,42 +28,53 @@
 `timescale 1ns / 1ps
 
 module NEUROMORPHIC_X1_macro (
-    input  logic        CLKin,         // Clock input
-    input  logic        RSTin,         // Reset
-    input  logic        EN,            // Enable
-    input  logic        R_WB,          // Read/Write select
-    input  logic [31:0] DI,            // Write data
-    input  logic [31:0] AD,            // Address
-    input  logic [3:0]  SEL,           // Byte select
-    output logic [31:0] DO,            // Read data
-    output logic        func_ack,      // Acknowledge
-
-    // Scan and test signals
-    input  logic        TM,
-    input  logic        SM,
-    input  logic        ScanInCC,
-    input  logic        ScanInDL,
-    input  logic        ScanInDR,
-    output logic        ScanOutCC,
-
-    // Analog / Power signals
-    input  logic        VDDC,
-    input  logic        VDDA,
-    input  logic        VSS,
-    input  logic        Iref,
-    input  logic        Vbias,
-    input  logic        Vcomp,
-    input  logic        Bias_comp1,
-    input  logic        Bias_comp2,
-    input  logic        Ramp,
-    input  logic        Vcc_L,
-    input  logic        Vcc_Body,
-    input  logic        VCC_reset,
-    input  logic        VCC_set,
-    input  logic        VCC_wl_reset,
-    input  logic        VCC_wl_set,
-    input  logic        VCC_wl_read,
-    input  logic        VCC_read
+  CLKin, RSTin, EN, R_WB, DI, AD, SEL, DO, func_ack,
+  TM, SM, ScanInCC, ScanInDL, ScanInDR, ScanOutCC,
+  VDDC, VDDA, VSS, Iref, Vbias, Vcomp, Bias_comp1, Bias_comp2,
+  Ramp, Vcc_L, Vcc_Body, VCC_reset, VCC_set,
+  VCC_wl_reset, VCC_wl_set, VCC_wl_read, VCC_read
 );
+
+  //--------------------------------------
+  // Inputs
+  //--------------------------------------
+  input         CLKin;
+  input         RSTin;
+  input         EN;
+  input         R_WB;
+  input  [31:0] DI;
+  input  [31:0] AD;
+  input  [3:0]  SEL;
+
+  input         TM;
+  input         SM;
+  input         ScanInCC;
+  input         ScanInDL;
+  input         ScanInDR;
+
+  input         VDDC;
+  input         VDDA;
+  input         VSS;
+  input         Iref;
+  input         Vbias;
+  input         Vcomp;
+  input         Bias_comp1;
+  input         Bias_comp2;
+  input         Ramp;
+  input         Vcc_L;
+  input         Vcc_Body;
+  input         VCC_reset;
+  input         VCC_set;
+  input         VCC_wl_reset;
+  input         VCC_wl_set;
+  input         VCC_wl_read;
+  input         VCC_read;
+
+  //--------------------------------------
+  // Outputs
+  //--------------------------------------
+  output [31:0] DO;
+  output        func_ack;
+  output        ScanOutCC;
 
 endmodule
