@@ -84,7 +84,8 @@ module user_project_wrapper #(
 
 NEUROMORPHIC_X1_wb_wrapper mprj (
 `ifdef USE_POWER_PINS
-	.VDD(vccd1),
+	.VDDC(vccd1),
+	.VDDA(vdda1),
 	.VSS(vssd1),
 	.Iref(analog_io[7]),
 	.Vbias(analog_io[8]),
