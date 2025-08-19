@@ -11,7 +11,6 @@
 // - READ: WL=1, SL=1, BL sensed by sense amp
 //
 // Note: Digital-only, does not model analog effects
-// ------------------------------------------------------------
 
 module rram_access_cell(WL, SL, BL);
     input WL;   // Word Line: selects the row
