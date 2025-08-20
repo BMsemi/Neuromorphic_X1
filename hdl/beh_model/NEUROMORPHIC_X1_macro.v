@@ -37,55 +37,53 @@ module NEUROMORPHIC_X1_macro (
   input  wire        ScanInDR,
   output wire        ScanOutCC,
 	
-  // Analog Pins
-  input  wire        VDDC,
-  input  wire        VDDA,
-  input  wire        VSS,
-  input  wire        Iref,
-  input  wire        Vbias,
-  input  wire        Vcomp,
-  input  wire        Bias_comp1,
-  input  wire        Bias_comp2,
-  input  wire        Ramp,
-  input  wire        Vcc_L,
-  input  wire        Vcc_Body,
-  input  wire        VCC_reset,
-  input  wire        VCC_set,
-  input  wire        VCC_wl_reset,
-  input  wire        VCC_wl_set,
-  input  wire        VCC_wl_read,
-  input  wire        VCC_read
+	// Analog Pins
+	input  VDDC,
+	input  VDDA,
+	input  VSS,
+	input  Iref,
+	input  Vbias,
+	input  Vcomp,
+	input  Bias_comp1,
+	input  Bias_comp2,
+	input  Ramp,
+	input  Vcc_L,
+	input  Vcc_Body,
+	input  VCC_reset,
+	input  VCC_set,
+	input  VCC_wl_reset,
+	input  VCC_wl_set,
+	input  VCC_wl_read,
+	input  VCC_read
 );
 
-  // Always drive scan-out to a known value (not used)
-  assign ScanOutCC = 1'b0;
-
-`ifndef SYNTHESIS
-  //==============================================================================================
-  // SIMULATION-ONLY IMPLEMENTATION (non-synthesizable timing, $display, event controls, etc.)
-  //==============================================================================================
-
-  // Configurable simulation delays
+  //------------------------------------------------------------------------------------------------
+  // Parameters: Configurable simulation delays
+  //------------------------------------------------------------------------------------------------
   parameter RD_Dly       = 44;  // Clock cycles delay before read data becomes valid
   parameter WR_Dly       = 10;  // Write delay (simulate ~44K cycles for real chip)
   parameter RD_Data_hold = 1;   // Hold read data for this many cycles
 
+  //------------------------------------------------------------------------------------------------
   // Internal memory and arrays
-  reg [7:0]  array_mem [0:31][0:31];     // 32x32 memory array (2D)
-  reg [31:0] ip_queue_data    [0:31];    // Write queue (fixed size)
-  reg [31:0] array_mem_queue  [0:31];    // Readback queue (fixed size)
-  reg [31:0] ip_reg, op_reg;             // Temp registers
+  //------------------------------------------------------------------------------------------------
+  reg [7:0]  array_mem [0:31][0:31];          // 32x32 memory array (2D)
+  reg [31:0] ip_queue_data [0:31];             // Write queue (fixed size array)
+  reg [31:0] array_mem_queue [0:31];          // Stores address/data for read (fixed size array)
+  reg [31:0] ip_reg, op_reg;        // Temp registers
 
-  // Queue management pointers/sizes
-  reg [5:0] ip_queue_head,  ip_queue_tail,  ip_queue_size;
-  reg [5:0] array_queue_head, array_queue_tail, array_queue_size;
+  // Queue management pointers
+  reg [5:0] ip_queue_head, ip_queue_tail;     // Write queue pointers
+  reg [5:0] array_queue_head, array_queue_tail; // Read queue pointers
+  reg [5:0] ip_queue_size, array_queue_size;  // Queue sizes
 
-  integer count;       // Pending transactions
-  integer wr_count;    // Pending writes for post-EN delay
-  integer i, j, k;     // Loop counters
+  integer count;     // Total transactions count (pending reads/writes)
+  integer wr_count;  // Pending write transaction count (for simulating delay)
+  integer i, j, k;      // Loop counters
 
-  // Queue helpers (simulation tasks)
-  task push_ip_queue(input [31:0] data);
+  // Queue management functions implemented as tasks
+  task push_ip_queue;
+    input [31:0] data;
     begin
       if (ip_queue_size < 32) begin
         ip_queue_data[ip_queue_head] = data;
@@ -95,7 +93,8 @@ module NEUROMORPHIC_X1_macro (
     end
   endtask
 
-  task pop_ip_queue(output [31:0] data);
+  task pop_ip_queue;
+    output [31:0] data;
     begin
       if (ip_queue_size > 0) begin
         data = ip_queue_data[ip_queue_tail];
@@ -105,7 +104,8 @@ module NEUROMORPHIC_X1_macro (
     end
   endtask
 
-  task push_array_queue(input [31:0] data);
+  task push_array_queue;
+    input [31:0] data;
     begin
       if (array_queue_size < 32) begin
         array_mem_queue[array_queue_head] = data;
@@ -115,7 +115,8 @@ module NEUROMORPHIC_X1_macro (
     end
   endtask
 
-  task pop_array_queue(output [31:0] data);
+  task pop_array_queue;
+    output [31:0] data;
     begin
       if (array_queue_size > 0) begin
         data = array_mem_queue[array_queue_tail];
@@ -125,71 +126,85 @@ module NEUROMORPHIC_X1_macro (
     end
   endtask
 
-  // Main simulation FSM with timing controls
+  //------------------------------------------------------------------------------------------------
+  // Main FSM: Reset, Write, Read
+  //------------------------------------------------------------------------------------------------
   always @(posedge CLKin or negedge RSTin) begin
     if (!RSTin) begin
+      // Asynchronous reset
       func_ack <= 1'b0;
       DO       <= 32'd0;
-
-      // Reset pointers/sizes
-      ip_queue_head   <= 6'd0;
-      ip_queue_tail   <= 6'd0;
-      ip_queue_size   <= 6'd0;
-      array_queue_head<= 6'd0;
-      array_queue_tail<= 6'd0;
-      array_queue_size<= 6'd0;
-
+      
+      // Reset queue pointers and sizes
+      ip_queue_head <= 6'd0;
+      ip_queue_tail <= 6'd0;
+      ip_queue_size <= 6'd0;
+      array_queue_head <= 6'd0;
+      array_queue_tail <= 6'd0;
+      array_queue_size <= 6'd0;
+      
       count    <= 0;
       wr_count <= 0;
 
     end else begin
       func_ack <= 1'b0;
 
-      // WRITE
+      //--------------------------------------------------------------------------------------------
+      // WRITE OPERATION: Valid EN + Write mode
+      //--------------------------------------------------------------------------------------------
       if (EN && !R_WB && count < 32) begin
-        push_ip_queue(DI);
-        count    = count + 1;
+        push_ip_queue(DI);                    // Add data to write queue
+        count = count + 1;
         wr_count = wr_count + 1;
         func_ack <= 1'b1;
 
         if (ip_queue_size > 0) begin
-          pop_ip_queue(ip_reg);
-          push_array_queue(ip_reg);
-          array_mem[ip_reg[29:25]][ip_reg[24:20]] = ip_reg[7:0];
+          pop_ip_queue(ip_reg);                                    // Get oldest data
+          push_array_queue(ip_reg);                                // Track for read
+          array_mem[ip_reg[29:25]][ip_reg[24:20]] = ip_reg[7:0];   // Store 8-bit data in 2D array
         end
 
         $display("[WRITE] @%0t: Pushed %h | Count = %0d", $realtime, DI, count);
+
         if (count == 32)
           $display("[INFO] FIFO Full, Cannot Perform Write Operation");
 
-      // READ
+      //--------------------------------------------------------------------------------------------
+      // READ OPERATION: Valid EN + Read mode + data available
+      //--------------------------------------------------------------------------------------------
       end else if (EN && R_WB && array_queue_size > 0) begin
-        // Simulated read latency
+        // Simulate programmable delay before data available
         for (i = 0; i < RD_Dly; i = i + 1) begin
           @(posedge CLKin);
           if (!EN) begin
             $display("[READ] Aborted early @%0t", $realtime);
-            disable for;
+            i = RD_Dly; // Break out of loop
           end
         end
 
-        if (EN) begin
+        if (EN) begin // Check if still enabled after delay
+          // Pop oldest address, perform 8-bit read and zero-pad
           pop_array_queue(op_reg);
-          DO       <= {24'd0, array_mem[op_reg[29:25]][op_reg[24:20]]};
+          DO = {24'd0, array_mem[op_reg[29:25]][op_reg[24:20]]};  // Read from 2D array
           func_ack <= 1'b1;
-          count    = count - 1;
+          count = count - 1;
 
           $display("[READ] @%0t: Popped %h | Count = %0d", $realtime, DO, count);
 
-          // Hold time
-          for (j = 0; j < RD_Data_hold; j = j + 1) @(posedge CLKin);
+          // Hold read data for RD_Data_hold cycles
+          for (j = 0; j < RD_Data_hold; j = j + 1) begin
+            @(posedge CLKin);
+          end
           func_ack <= 1'b0;
 
-          if (count == 0)
+          if (count == 0) begin
             $display("[INFO] FIFO Empty, Cannot Perform Read Operation");
+          end
         end
 
-      // POST-WRITE IDLE DELAY (simulate writes completing after EN deassert)
+      //--------------------------------------------------------------------------------------------
+      // IDLE Delay: Simulate post-write delay even when no EN
+      //--------------------------------------------------------------------------------------------
       end else if (!EN && wr_count > 0) begin
         for (k = wr_count; k > 0; k = k - 1) begin
           repeat (WR_Dly) @(posedge CLKin);
@@ -199,18 +214,7 @@ module NEUROMORPHIC_X1_macro (
     end
   end
 
-`else
-  //==============================================================================================
-  // SYNTHESIS-STUB IMPLEMENTATION (NO timing constructs)
-  // - Ties outputs to safe defaults to silence synthesis timing warnings
-  // - Keeps interface intact; does NOT implement behavior
-  //==============================================================================================
-  
-  always @(*) begin
-    DO       = 32'd0;
-    func_ack = 1'b0;
-  end
-
-`endif // !SYNTHESIS
+  // Assign unused scan output
+  assign ScanOutCC = 1'b0;
 
 endmodule
