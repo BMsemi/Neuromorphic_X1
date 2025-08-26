@@ -12,7 +12,7 @@ It shows how software can send “commands” over Wishbone to program
 a cell or request a read, and how read data is returned later.
 
 Files you’ll see in this project:
-• wb_pin_mapping — The Wishbone shim. It exposes ONE address
+• Neuromorphic_X1_wb — The Wishbone shim. It exposes ONE address
   (0x3000_000C). Writes/reads at that address are forwarded to the core.
 • Neuromorphic_X1 — The behavioral “core” that holds
   the 32×32 array, an input FIFO (commands) and an output FIFO (read data).

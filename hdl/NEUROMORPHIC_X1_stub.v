@@ -27,7 +27,7 @@
 
 `timescale 1ns / 1ps
 
-module wb_pin_mapping (
+module Neuromorphic_X1_wb (
   // Clocks & resets
   input         user_clk,     // user clock
   input         user_rst,     // user reset

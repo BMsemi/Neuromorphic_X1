@@ -6,7 +6,7 @@
 //  - WB READ  @ 0x3000_000C  -> get result from core
 // -----------------------------------------------------------------------------
 
-module wb_pin_mapping (
+module Neuromorphic_X1_wb (
   input         user_clk,     // user clock
   input         user_rst,     // user reset
   input         wb_clk_i,     // Wishbone clock

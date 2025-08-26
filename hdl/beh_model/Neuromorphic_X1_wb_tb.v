@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module wb_pin_mapping_tb_1;
+module Neuromorphic_X1_wb_tb;
 
   // Clock and reset signals
   reg user_clk;
@@ -23,7 +23,7 @@ module wb_pin_mapping_tb_1;
 	localparam [31:0] ADDR_MATCH = 32'h3000_000C;
 
   // Instantiate the design under test (DUT)
-  wb_pin_mapping dut (
+  Neuromorphic_X1_wb dut (
     .user_clk(user_clk),
     .user_rst(user_rst),
     .wb_clk_i(wb_clk_i),

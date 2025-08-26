@@ -1,11 +1,11 @@
 vlib work
 vmap work work
 
-vlog +acc +sv Neuromorphic_X1_Beh.v tb_neuromorphic_x1.v wb_pin_mapping_tb_1.v
+vlog +acc +sv Neuromorphic_X1_Beh.v Neuromorphic_X1_wb_tb.v
 
-vsim work.wb_pin_mapping_tb_1
+vsim work.Neuromorphic_X1_wb_tb
 
-add wave -position insertpoint sim:/wb_pin_mapping_tb_1/*
-add wave -position insertpoint sim:/wb_pin_mapping_tb_1/dut/core_inst/*
+add wave -position insertpoint sim:/Neuromorphic_X1_wb_tb/*
+add wave -position insertpoint sim:/Neuromorphic_X1_wb_tb/dut/core_inst/*
 
 run -all
