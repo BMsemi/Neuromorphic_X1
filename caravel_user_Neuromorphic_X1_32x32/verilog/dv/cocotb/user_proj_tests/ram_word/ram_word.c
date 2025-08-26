@@ -19,6 +19,15 @@
 #include <ram_info.h>
 #include <stdint.h>
 
+// Wait for 'cycles' CPU clock cycles using RISC-V cycle CSR
+static inline void wait_cycles(uint32_t cycles)
+{
+    // Volatile asm prevents the loop from being optimized away.
+    for (uint32_t i = 0; i < cycles; i++) {
+        __asm__ volatile ("nop");
+    }
+}
+
 uint32_t read_wishbone(uint32_t);
 
 void main(){
@@ -45,12 +54,17 @@ void main(){
     // Performing Write Operation
     *((volatile uint32_t *) addr) = wdata;
     *((volatile uint32_t *) addr) = wdata1;
+    
+    wait_cycles(300); // Delay
+    
     // Performing Read Operation
     uint32_t temp = read_wishbone(addr);
     
     *((volatile uint32_t *) addr) = wdata2;
     *((volatile uint32_t *) addr) = wdata3;
     *((volatile uint32_t *) addr) = wdata1;
+    
+    wait_cycles(900); // Delay
     
     uint32_t temp1 = read_wishbone(addr);
     uint32_t temp2 = read_wishbone(addr);
@@ -70,4 +84,3 @@ uint32_t read_wishbone(uint32_t address)
 {
     return *(volatile uint32_t *)address;
 }
-
