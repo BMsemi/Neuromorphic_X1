@@ -8,21 +8,18 @@
     "CLOCK_PERIOD": 25,
     "CLOCK_PORT": "wb_clk_i",
     "CLOCK_NET": "mprj.clk",
-    "FP_PDN_MACRO_HOOKS": "mprj vccd1 vssd1 VPWR VGND",
+    "FP_PDN_MACRO_HOOKS": [
+        "mprj vdda1 vssa1 VDDA VSS",
+        "mprj vccd1 vssd1 VDDC VSS"
+    ],
     "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
     "MAGIC_DEF_LABELS": 0,
     "VERILOG_FILES_BLACKBOX": [
-        "dir::../../verilog/gl/CF_SRAM_1024x32_wb_wrapper.v"
+        "dir::../../stub/NEUROMORPHIC_X1_stub.v"
     ],
-    "EXTRA_LEFS": "dir::../../lef/CF_SRAM_1024x32_wb_wrapper.lef",
-    "EXTRA_GDS_FILES": "dir::../../gds/CF_SRAM_1024x32_wb_wrapper.gds",
-    "EXTRA_LIBS": "dir::../../lib/CF_SRAM_1024x32_wb_wrapper.lib",
-    "EXTRA_SPEFS": [
-        "CF_SRAM_1024x32_wb_wrapper",
-        "dir::../../spef/multicorner/CF_SRAM_1024x32_wb_wrapper.min.spef",
-        "dir::../../spef/multicorner/CF_SRAM_1024x32_wb_wrapper.nom.spef",
-        "dir::../../spef/multicorner/CF_SRAM_1024x32_wb_wrapper.max.spef"
-    ],
+    "EXTRA_LEFS": "dir::../../lef/Neuromorphic_X1_wb.lef",
+    "EXTRA_GDS_FILES": "dir::../../gds/Neuromorphic_X1_wb.gds",
+    "EXTRA_LIBS": "dir::../../lib/Neuromorphic_X1_wb.lib",
     "BASE_SDC_FILE": "dir::base_user_project_wrapper.sdc",
     "IO_SYNC": 0,
     "MAX_TRANSITION_CONSTRAINT": 1.5,
@@ -65,6 +62,9 @@
     "FP_PDN_CORE_RING_HOFFSET": 12.45,
     "FP_PDN_CORE_RING_VSPACING": 1.7,
     "FP_PDN_CORE_RING_HSPACING": 1.7,
+    "GRT_ADJUSTMENT": 0.2,
+    "GRT_OVERFLOW_ITERS": 100,
+    "PL_TARGET_DENSITY": 0.35,
     "FP_PDN_VWIDTH": 3.1,
     "FP_PDN_HWIDTH": 3.1,
     "FP_PDN_VSPACING": "expr::(5 * $FP_PDN_CORE_RING_VWIDTH)",
@@ -81,8 +81,20 @@
         "vssa1",
         "vssa2"
     ],
-    "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS",
-    "RT_MAX_LAYER": "met4",
+    "ROUTING_OBSTRUCTIONS": [
+        "li1 15.18 114.24 515.20 699.04",
+        "mcon 15.18 114.24 515.20 699.04",
+        "met1 15.18 114.24 515.20 699.04",
+        "via1 15.18 114.24 515.20 699.04",
+        "met2 15.18 114.24 515.20 699.04",
+        "met3 15.18 114.24 515.20 699.04"
+    ],
+    "PDN_OBSTRUCTIONS": [],
+    "MACRO_PLACE_HALO": "20 20",
+    "MACRO_PLACE_CHANNEL": "40 40",
+    "PL_MACRO_HALO": "5 5",
+    "PL_MACRO_CHANNEL": "10 10",
+    "RT_MAX_LAYER": "met5",
     "DIE_AREA": "0 0 2920 3520",
     "FP_DEF_TEMPLATE": "dir::fixed_dont_change/user_project_wrapper.def"
 }
