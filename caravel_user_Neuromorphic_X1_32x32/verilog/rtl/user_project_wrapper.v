@@ -52,7 +52,7 @@ module user_project_wrapper #(
 
 
     // ==========================================================
-    // PAD → analog_io[] mapping (index = PAD - 7)
+    // PAD analog_io[] mapping (index = PAD - 7)
     // Edit these PAD numbers to move pins to other GPIO pads.
     // ==========================================================
     localparam integer IREF_PAD         = 7;
@@ -105,48 +105,50 @@ module user_project_wrapper #(
     // -----------------------------
     // Instantiate your hard macro
     // -----------------------------
-    Neuromorphic_X1_wb mprj (
-        // Clocks / resets
-        .user_clk (wb_clk_i),
-        .user_rst (wb_rst_i),
-        .wb_clk_i (wb_clk_i),
-        .wb_rst_i (wb_rst_i),
+   Neuromorphic_X1_wb i_core (
+`ifdef USE_POWER_PINS
+  .VDDC (vccd1),
+  .VDDA (vdda1),
+  .VSS  (vssa1),
+`endif
 
-        // Wishbone
-        .wbs_adr_i(wbs_adr_i),
-        .wbs_dat_i(wbs_dat_i),
-        .wbs_cyc_i(wbs_cyc_i),
-        .wbs_stb_i(wbs_stb_i),
-        .wbs_we_i (wbs_we_i),
-        .wbs_sel_i(wbs_sel_i),
-        .wbs_dat_o(wbs_dat_o),
-        .wbs_ack_o(wbs_ack_o),
+  // Clocks / resets
+  .user_clk (wb_clk_i),
+  .user_rst (wb_rst_i),
+  .wb_clk_i (wb_clk_i),
+  .wb_rst_i (wb_rst_i),
 
-        // Scan/Test
-        .ScanInCC (ScanInCC),
-        .ScanInDL (ScanInDL),
-        .ScanInDR (ScanInDR),
-        .TM       (TM),
-        .ScanOutCC(ScanOutCC),
+  // Wishbone
+  .wbs_stb_i (wbs_stb_i),
+  .wbs_cyc_i (wbs_cyc_i),
+  .wbs_we_i  (wbs_we_i),
+  .wbs_sel_i (wbs_sel_i),
+  .wbs_dat_i (wbs_dat_i),
+  .wbs_adr_i (wbs_adr_i),
+  .wbs_dat_o (wbs_dat_o),
+  .wbs_ack_o (wbs_ack_o),
 
-        // Analog / bias pins via analog_io[]
-        .Iref        (Iref),
-        .VSS         (vssa1),      // rail
-        .Vcc_read    (Vcc_read),
-        .Vcomp       (Vcomp),
-        .Bias_comp2  (Bias_comp2),
-        .Vcc_wl_read (Vcc_wl_read),
-        .Vcc_wl_set  (Vcc_wl_set),
-        .VDDA        (vdda1),     // rail
-        .VDDC        (vccd1),     // rail
-        .Vbias       (Vbias),
-        .Vcc_wl_reset(Vcc_wl_reset),
-        .Vcc_set     (Vcc_set),
-        .Vcc_reset   (Vcc_reset),
-        .Vcc_L       (Vcc_L),
-        .Vcc_Body    (Vcc_Body)
-    );
+  // Scan/Test
+  .ScanInCC  (1'b0),
+  .ScanInDL  (1'b0),
+  .ScanInDR  (1'b0),
+  .TM        (1'b0),
+  .ScanOutCC (/* unconnected */),
 
+  // Analog / bias pins (drive from analog_io[] wires you already built)
+  .Iref          (Iref),
+  .Vcc_read      (Vcc_read),
+  .Vcomp         (Vcomp),
+  .Bias_comp2    (Bias_comp2),
+  .Vcc_wl_read   (Vcc_wl_read),
+  .Vcc_wl_set    (Vcc_wl_set),
+  .Vbias         (Vbias),
+  .Vcc_wl_reset  (Vcc_wl_reset),
+  .Vcc_set       (Vcc_set),
+  .Vcc_reset     (Vcc_reset),
+  .Vcc_L         (Vcc_L),
+  .Vcc_Body      (Vcc_Body)
+);
 endmodule
 `default_nettype wire
 
