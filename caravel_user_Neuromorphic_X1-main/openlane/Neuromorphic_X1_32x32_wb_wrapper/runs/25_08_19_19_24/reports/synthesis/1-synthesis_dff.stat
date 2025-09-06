@@ -1,0 +1,20 @@
+
+59. Printing statistics.
+
+=== ReRAM_Wishbone_Interface ===
+
+   Number of wires:                 65
+   Number of wire bits:            161
+   Number of public wires:          29
+   Number of public wire bits:     125
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 38
+     $_ANDNOT_                       2
+     $_AND_                          1
+     $_NAND_                         2
+     $_ORNOT_                        1
+     $_OR_                          31
+     NEUROMORPHIC_X1_macro           1
+

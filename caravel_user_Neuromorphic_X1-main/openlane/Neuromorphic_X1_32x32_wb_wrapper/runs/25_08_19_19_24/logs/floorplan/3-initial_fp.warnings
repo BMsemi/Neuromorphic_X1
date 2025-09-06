@@ -1,0 +1,13 @@
+[WARNING ODB-0176] error: undefined layer (li) referenced
+[WARNING STA-0201] /home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/runs/25_08_19_19_24/results/synthesis/ReRAM_Wishbone_Interface.v line 182, instance \functional.NEUROMORPHIC_X1_inst  port CLKin not found.
+[WARNING STA-0201] /home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/runs/25_08_19_19_24/results/synthesis/ReRAM_Wishbone_Interface.v line 182, instance \functional.NEUROMORPHIC_X1_inst  port RSTin not found.
+[WARNING STA-0201] /home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/runs/25_08_19_19_24/results/synthesis/ReRAM_Wishbone_Interface.v line 182, instance \functional.NEUROMORPHIC_X1_inst  port SM not found.
+[WARNING STA-0201] /home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/runs/25_08_19_19_24/results/synthesis/ReRAM_Wishbone_Interface.v line 182, instance \functional.NEUROMORPHIC_X1_inst  port VCC_read not found.
+[WARNING STA-0201] /home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/runs/25_08_19_19_24/results/synthesis/ReRAM_Wishbone_Interface.v line 182, instance \functional.NEUROMORPHIC_X1_inst  port VCC_reset not found.
+[WARNING STA-0201] /home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/runs/25_08_19_19_24/results/synthesis/ReRAM_Wishbone_Interface.v line 182, instance \functional.NEUROMORPHIC_X1_inst  port VCC_set not found.
+[WARNING STA-0201] /home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/runs/25_08_19_19_24/results/synthesis/ReRAM_Wishbone_Interface.v line 182, instance \functional.NEUROMORPHIC_X1_inst  port VCC_wl_read not found.
+[WARNING STA-0201] /home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/runs/25_08_19_19_24/results/synthesis/ReRAM_Wishbone_Interface.v line 182, instance \functional.NEUROMORPHIC_X1_inst  port VCC_wl_reset not found.
+[WARNING STA-0201] /home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/runs/25_08_19_19_24/results/synthesis/ReRAM_Wishbone_Interface.v line 182, instance \functional.NEUROMORPHIC_X1_inst  port VCC_wl_set not found.
+[WARNING STA-0201] /home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/runs/25_08_19_19_24/results/synthesis/ReRAM_Wishbone_Interface.v line 182, instance \functional.NEUROMORPHIC_X1_inst  port func_ack not found.
+[WARNING ORD-2011] LEF master NEUROMORPHIC_X1_macro has no liberty cell.
+[WARNING IFP-0028] Core area lower left (5.000, 5.000) snapped to (5.060, 5.440).

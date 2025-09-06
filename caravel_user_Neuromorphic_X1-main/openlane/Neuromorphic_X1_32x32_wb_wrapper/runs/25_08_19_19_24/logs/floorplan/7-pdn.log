@@ -1,0 +1,40 @@
+OpenROAD da0053d7b0014ab9c87ea148875ff6c2a0f9b658 
+Features included (+) or not (-):  +Charts +GPU +GUI +MPL2 +PAR +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/runs/25_08_19_19_24/tmp/floorplan/6-tapcell.odb'…
+define_corners Typical
+read_liberty -corner Typical /home/vboxuser/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -corner Typical /home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/../../ip/Neuromorphic_X1_32x32/lib/ETM_AV_TC_RCTYPICAL.lib
+Using 1e-12 for capacitance...
+Using 1e+03 for resistance...
+Using 1e-09 for time...
+Using 1e+00 for voltage...
+Using 1e-03 for current...
+Using 1e-09 for power...
+Using 1e-06 for distance...
+Reading design constraints file at '/home/vboxuser/caravel_user_Neuromorphic_X1_32x32/openlane/Neuromorphic_X1_32x32_wb_wrapper/base.sdc'…
+[INFO]: Creating clock {clk} for port wb_clk_i with period: 25
+[INFO]: Setting clock uncertainity to: 0.1
+[INFO]: Setting maximum transition to: 1.5
+[INFO]: Setting maximum fanout to: 15
+[INFO]: Setting timing derate to: 5.0 %
+[INFO]: Setting clock latency range: 4.65 : 5.57
+[INFO]: Setting clock transition: 0.61
+[INFO PDN-0001] Inserting grid: stdcell_grid
+[INFO PDN-0001] Inserting grid: macro - functional.NEUROMORPHIC_X1_inst
+[WARNING PDN-0110] No via inserted between met2 and met3 at (309.1800, 189.5600) - (310.9400, 189.7200) on VDDA
+[WARNING PSM-0038] Unconnected node on net VDDA at location (580.000um, 705.110um), layer: met3.
+[WARNING PSM-0038] Unconnected node on net VDDA at location (580.000um, 709.610um), layer: met3.
+[WARNING PSM-0038] Unconnected node on net VDDA at location (580.000um, 712.110um), layer: met3.
+[WARNING PSM-0038] Unconnected node on net VDDA at location (580.000um, 714.610um), layer: met3.
+[WARNING PSM-0038] Unconnected node on net VDDA at location (580.000um, 739.520um), layer: met3.
+[WARNING PSM-0038] Unconnected node on net VDDA at location (580.000um, 745.985um), layer: met3.
+[WARNING PSM-0038] Unconnected node on net VDDA at location (580.000um, 752.445um), layer: met3.
+[WARNING PSM-0038] Unconnected node on net VDDA at location (580.000um, 758.350um), layer: met3.
+[WARNING PSM-0038] Unconnected node on net VDDA at location (580.000um, 760.960um), layer: met3.
+[WARNING PSM-0038] Unconnected node on net VDDA at location (580.000um, 777.580um), layer: met3.
+[WARNING PSM-0038] Unconnected node on net VDDA at location (580.000um, 780.580um), layer: met3.
+[WARNING PSM-0039] Unconnected instance functional.NEUROMORPHIC_X1_inst/VDDA at location (580.000um, 741.532um).
+[ERROR PSM-0069] Check connectivity failed on VDDA.
+Error: pdn.tcl, 43 PSM-0069

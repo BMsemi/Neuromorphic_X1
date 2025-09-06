@@ -1,0 +1,834 @@
+VERSION 5.8 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN ReRAM_Wishbone_Interface ;
+UNITS DISTANCE MICRONS 1000 ;
+DIEAREA ( 0 0 ) ( 380000 435000 ) ;
+ROW ROW_0 unithd 5060 5440 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_1 unithd 5060 8160 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_2 unithd 5060 10880 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_3 unithd 5060 13600 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_4 unithd 5060 16320 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_5 unithd 5060 19040 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_6 unithd 5060 21760 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_7 unithd 5060 24480 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_8 unithd 5060 27200 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_9 unithd 5060 29920 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_10 unithd 5060 32640 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_11 unithd 5060 35360 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_12 unithd 5060 38080 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_13 unithd 5060 40800 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_14 unithd 5060 43520 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_15 unithd 5060 46240 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_16 unithd 5060 48960 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_17 unithd 5060 51680 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_18 unithd 5060 54400 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_19 unithd 5060 57120 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_20 unithd 5060 59840 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_21 unithd 5060 62560 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_22 unithd 5060 65280 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_23 unithd 5060 68000 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_24 unithd 5060 70720 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_25 unithd 5060 73440 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_26 unithd 5060 76160 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_27 unithd 5060 78880 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_28 unithd 5060 81600 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_29 unithd 5060 84320 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_30 unithd 5060 87040 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_31 unithd 5060 89760 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_32 unithd 5060 92480 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_33 unithd 5060 95200 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_34 unithd 5060 97920 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_35 unithd 5060 100640 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_36 unithd 5060 103360 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_37 unithd 5060 106080 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_38 unithd 5060 108800 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_39 unithd 5060 111520 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_40 unithd 5060 114240 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_41 unithd 5060 116960 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_42 unithd 5060 119680 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_43 unithd 5060 122400 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_44 unithd 5060 125120 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_45 unithd 5060 127840 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_46 unithd 5060 130560 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_47 unithd 5060 133280 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_48 unithd 5060 136000 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_49 unithd 5060 138720 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_50 unithd 5060 141440 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_51 unithd 5060 144160 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_52 unithd 5060 146880 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_53 unithd 5060 149600 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_54 unithd 5060 152320 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_55 unithd 5060 155040 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_56 unithd 5060 157760 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_57 unithd 5060 160480 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_58 unithd 5060 163200 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_59 unithd 5060 165920 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_60 unithd 5060 168640 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_61 unithd 5060 171360 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_62 unithd 5060 174080 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_63 unithd 5060 176800 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_64 unithd 5060 179520 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_65 unithd 5060 182240 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_66 unithd 5060 184960 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_67 unithd 5060 187680 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_68 unithd 5060 190400 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_69 unithd 5060 193120 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_70 unithd 5060 195840 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_71 unithd 5060 198560 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_72 unithd 5060 201280 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_73 unithd 5060 204000 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_74 unithd 5060 206720 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_75 unithd 5060 209440 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_76 unithd 5060 212160 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_77 unithd 5060 214880 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_78 unithd 5060 217600 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_79 unithd 5060 220320 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_80 unithd 5060 223040 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_81 unithd 5060 225760 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_82 unithd 5060 228480 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_83 unithd 5060 231200 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_84 unithd 5060 233920 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_85 unithd 5060 236640 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_86 unithd 5060 239360 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_87 unithd 5060 242080 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_88 unithd 5060 244800 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_89 unithd 5060 247520 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_90 unithd 5060 250240 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_91 unithd 5060 252960 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_92 unithd 5060 255680 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_93 unithd 5060 258400 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_94 unithd 5060 261120 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_95 unithd 5060 263840 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_96 unithd 5060 266560 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_97 unithd 5060 269280 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_98 unithd 5060 272000 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_99 unithd 5060 274720 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_100 unithd 5060 277440 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_101 unithd 5060 280160 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_102 unithd 5060 282880 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_103 unithd 5060 285600 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_104 unithd 5060 288320 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_105 unithd 5060 291040 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_106 unithd 5060 293760 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_107 unithd 5060 296480 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_108 unithd 5060 299200 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_109 unithd 5060 301920 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_110 unithd 5060 304640 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_111 unithd 5060 307360 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_112 unithd 5060 310080 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_113 unithd 5060 312800 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_114 unithd 5060 315520 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_115 unithd 5060 318240 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_116 unithd 5060 320960 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_117 unithd 5060 323680 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_118 unithd 5060 326400 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_119 unithd 5060 329120 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_120 unithd 5060 331840 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_121 unithd 5060 334560 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_122 unithd 5060 337280 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_123 unithd 5060 340000 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_124 unithd 5060 342720 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_125 unithd 5060 345440 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_126 unithd 5060 348160 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_127 unithd 5060 350880 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_128 unithd 5060 353600 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_129 unithd 5060 356320 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_130 unithd 5060 359040 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_131 unithd 5060 361760 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_132 unithd 5060 364480 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_133 unithd 5060 367200 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_134 unithd 5060 369920 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_135 unithd 5060 372640 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_136 unithd 5060 375360 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_137 unithd 5060 378080 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_138 unithd 5060 380800 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_139 unithd 5060 383520 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_140 unithd 5060 386240 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_141 unithd 5060 388960 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_142 unithd 5060 391680 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_143 unithd 5060 394400 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_144 unithd 5060 397120 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_145 unithd 5060 399840 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_146 unithd 5060 402560 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_147 unithd 5060 405280 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_148 unithd 5060 408000 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_149 unithd 5060 410720 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_150 unithd 5060 413440 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_151 unithd 5060 416160 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_152 unithd 5060 418880 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_153 unithd 5060 421600 FS DO 804 BY 1 STEP 460 0 ;
+ROW ROW_154 unithd 5060 424320 N DO 804 BY 1 STEP 460 0 ;
+ROW ROW_155 unithd 5060 427040 FS DO 804 BY 1 STEP 460 0 ;
+TRACKS X 230 DO 826 STEP 460 LAYER li1 ;
+TRACKS Y 170 DO 1279 STEP 340 LAYER li1 ;
+TRACKS X 170 DO 1117 STEP 340 LAYER met1 ;
+TRACKS Y 170 DO 1279 STEP 340 LAYER met1 ;
+TRACKS X 230 DO 826 STEP 460 LAYER met2 ;
+TRACKS Y 230 DO 946 STEP 460 LAYER met2 ;
+TRACKS X 340 DO 559 STEP 680 LAYER met3 ;
+TRACKS Y 340 DO 639 STEP 680 LAYER met3 ;
+TRACKS X 460 DO 413 STEP 920 LAYER met4 ;
+TRACKS Y 460 DO 473 STEP 920 LAYER met4 ;
+TRACKS X 1700 DO 112 STEP 3400 LAYER met5 ;
+TRACKS Y 1700 DO 128 STEP 3400 LAYER met5 ;
+COMPONENTS 19 ;
+    - _17_ sky130_fd_sc_hd__or4_2 ;
+    - _18_ sky130_fd_sc_hd__or4_2 ;
+    - _19_ sky130_fd_sc_hd__or4b_2 ;
+    - _20_ sky130_fd_sc_hd__or4bb_2 ;
+    - _21_ sky130_fd_sc_hd__or4_2 ;
+    - _22_ sky130_fd_sc_hd__nand2_2 ;
+    - _23_ sky130_fd_sc_hd__or4bb_2 ;
+    - _24_ sky130_fd_sc_hd__or4_2 ;
+    - _25_ sky130_fd_sc_hd__or4_2 ;
+    - _26_ sky130_fd_sc_hd__or4_2 ;
+    - _27_ sky130_fd_sc_hd__or4_2 ;
+    - _28_ sky130_fd_sc_hd__or4_2 ;
+    - _29_ sky130_fd_sc_hd__nor4_2 ;
+    - _30_ sky130_fd_sc_hd__conb_1 ;
+    - _31_ sky130_fd_sc_hd__conb_1 ;
+    - _32_ sky130_fd_sc_hd__conb_1 ;
+    - _33_ sky130_fd_sc_hd__conb_1 ;
+    - _34_ sky130_fd_sc_hd__conb_1 ;
+    - functional.NEUROMORPHIC_X1_inst NEUROMORPHIC_X1_macro + FIXED ( 200000 200000 ) N ;
+END COMPONENTS
+PINS 123 ;
+    - Bias_comp1 + NET Bias_comp1 + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 354430 2000 ) N ;
+    - Bias_comp2 + NET Bias_comp2 + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 37060 ) N ;
+    - Iref + NET Iref + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 47610 433000 ) N ;
+    - Ramp + NET Ramp + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 378000 72420 ) N ;
+    - VCC_read + NET VCC_read + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 142370 433000 ) N ;
+    - VCC_reset + NET VCC_reset + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 237130 433000 ) N ;
+    - VCC_set + NET VCC_set + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 331890 433000 ) N ;
+    - VCC_wl_read + NET VCC_wl_read + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 356730 2000 ) N ;
+    - VCC_wl_reset + NET VCC_wl_reset + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 109140 ) N ;
+    - VCC_wl_set + NET VCC_wl_set + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 181220 ) N ;
+    - VDDA + NET VDDA + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 359030 2000 ) N ;
+    - VDDC + NET VDDC + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 253300 ) N ;
+    - VSS + NET VSS + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 378000 216580 ) N ;
+    - Vbias + NET Vbias + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 325380 ) N ;
+    - Vcc_Body + NET Vcc_Body + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 397460 ) N ;
+    - Vcc_L + NET Vcc_L + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 378000 360740 ) N ;
+    - Vcomp + NET Vcomp + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 361330 2000 ) N ;
+    - wb_clk_i + NET wb_clk_i + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 110630 2000 ) N ;
+    - wb_rst_i + NET wb_rst_i + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 112930 2000 ) N ;
+    - wbs_ack_o + NET wbs_ack_o + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 115230 2000 ) N ;
+    - wbs_adr_i[0] + NET wbs_adr_i[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 124430 2000 ) N ;
+    - wbs_adr_i[10] + NET wbs_adr_i[10] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 202630 2000 ) N ;
+    - wbs_adr_i[11] + NET wbs_adr_i[11] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 209530 2000 ) N ;
+    - wbs_adr_i[12] + NET wbs_adr_i[12] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 216430 2000 ) N ;
+    - wbs_adr_i[13] + NET wbs_adr_i[13] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 223330 2000 ) N ;
+    - wbs_adr_i[14] + NET wbs_adr_i[14] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 230230 2000 ) N ;
+    - wbs_adr_i[15] + NET wbs_adr_i[15] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 237130 2000 ) N ;
+    - wbs_adr_i[16] + NET wbs_adr_i[16] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 244030 2000 ) N ;
+    - wbs_adr_i[17] + NET wbs_adr_i[17] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 250930 2000 ) N ;
+    - wbs_adr_i[18] + NET wbs_adr_i[18] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 257830 2000 ) N ;
+    - wbs_adr_i[19] + NET wbs_adr_i[19] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 264730 2000 ) N ;
+    - wbs_adr_i[1] + NET wbs_adr_i[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 133630 2000 ) N ;
+    - wbs_adr_i[20] + NET wbs_adr_i[20] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 271630 2000 ) N ;
+    - wbs_adr_i[21] + NET wbs_adr_i[21] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 278530 2000 ) N ;
+    - wbs_adr_i[22] + NET wbs_adr_i[22] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 285430 2000 ) N ;
+    - wbs_adr_i[23] + NET wbs_adr_i[23] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 292330 2000 ) N ;
+    - wbs_adr_i[24] + NET wbs_adr_i[24] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 299230 2000 ) N ;
+    - wbs_adr_i[25] + NET wbs_adr_i[25] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 306130 2000 ) N ;
+    - wbs_adr_i[26] + NET wbs_adr_i[26] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 313030 2000 ) N ;
+    - wbs_adr_i[27] + NET wbs_adr_i[27] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 319930 2000 ) N ;
+    - wbs_adr_i[28] + NET wbs_adr_i[28] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 326830 2000 ) N ;
+    - wbs_adr_i[29] + NET wbs_adr_i[29] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 333730 2000 ) N ;
+    - wbs_adr_i[2] + NET wbs_adr_i[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 142830 2000 ) N ;
+    - wbs_adr_i[30] + NET wbs_adr_i[30] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 340630 2000 ) N ;
+    - wbs_adr_i[31] + NET wbs_adr_i[31] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 347530 2000 ) N ;
+    - wbs_adr_i[3] + NET wbs_adr_i[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 152030 2000 ) N ;
+    - wbs_adr_i[4] + NET wbs_adr_i[4] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 161230 2000 ) N ;
+    - wbs_adr_i[5] + NET wbs_adr_i[5] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 168130 2000 ) N ;
+    - wbs_adr_i[6] + NET wbs_adr_i[6] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 175030 2000 ) N ;
+    - wbs_adr_i[7] + NET wbs_adr_i[7] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 181930 2000 ) N ;
+    - wbs_adr_i[8] + NET wbs_adr_i[8] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 188830 2000 ) N ;
+    - wbs_adr_i[9] + NET wbs_adr_i[9] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 195730 2000 ) N ;
+    - wbs_cyc_i + NET wbs_cyc_i + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 117530 2000 ) N ;
+    - wbs_dat_i[0] + NET wbs_dat_i[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 126730 2000 ) N ;
+    - wbs_dat_i[10] + NET wbs_dat_i[10] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 204930 2000 ) N ;
+    - wbs_dat_i[11] + NET wbs_dat_i[11] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 211830 2000 ) N ;
+    - wbs_dat_i[12] + NET wbs_dat_i[12] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 218730 2000 ) N ;
+    - wbs_dat_i[13] + NET wbs_dat_i[13] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 225630 2000 ) N ;
+    - wbs_dat_i[14] + NET wbs_dat_i[14] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 232530 2000 ) N ;
+    - wbs_dat_i[15] + NET wbs_dat_i[15] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 239430 2000 ) N ;
+    - wbs_dat_i[16] + NET wbs_dat_i[16] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 246330 2000 ) N ;
+    - wbs_dat_i[17] + NET wbs_dat_i[17] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 253230 2000 ) N ;
+    - wbs_dat_i[18] + NET wbs_dat_i[18] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 260130 2000 ) N ;
+    - wbs_dat_i[19] + NET wbs_dat_i[19] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 267030 2000 ) N ;
+    - wbs_dat_i[1] + NET wbs_dat_i[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 135930 2000 ) N ;
+    - wbs_dat_i[20] + NET wbs_dat_i[20] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 273930 2000 ) N ;
+    - wbs_dat_i[21] + NET wbs_dat_i[21] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 280830 2000 ) N ;
+    - wbs_dat_i[22] + NET wbs_dat_i[22] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 287730 2000 ) N ;
+    - wbs_dat_i[23] + NET wbs_dat_i[23] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 294630 2000 ) N ;
+    - wbs_dat_i[24] + NET wbs_dat_i[24] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 301530 2000 ) N ;
+    - wbs_dat_i[25] + NET wbs_dat_i[25] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 308430 2000 ) N ;
+    - wbs_dat_i[26] + NET wbs_dat_i[26] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 315330 2000 ) N ;
+    - wbs_dat_i[27] + NET wbs_dat_i[27] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 322230 2000 ) N ;
+    - wbs_dat_i[28] + NET wbs_dat_i[28] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 329130 2000 ) N ;
+    - wbs_dat_i[29] + NET wbs_dat_i[29] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 336030 2000 ) N ;
+    - wbs_dat_i[2] + NET wbs_dat_i[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 145130 2000 ) N ;
+    - wbs_dat_i[30] + NET wbs_dat_i[30] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 342930 2000 ) N ;
+    - wbs_dat_i[31] + NET wbs_dat_i[31] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 349830 2000 ) N ;
+    - wbs_dat_i[3] + NET wbs_dat_i[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 154330 2000 ) N ;
+    - wbs_dat_i[4] + NET wbs_dat_i[4] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 163530 2000 ) N ;
+    - wbs_dat_i[5] + NET wbs_dat_i[5] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 170430 2000 ) N ;
+    - wbs_dat_i[6] + NET wbs_dat_i[6] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 177330 2000 ) N ;
+    - wbs_dat_i[7] + NET wbs_dat_i[7] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 184230 2000 ) N ;
+    - wbs_dat_i[8] + NET wbs_dat_i[8] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 191130 2000 ) N ;
+    - wbs_dat_i[9] + NET wbs_dat_i[9] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 198030 2000 ) N ;
+    - wbs_dat_o[0] + NET wbs_dat_o[0] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 129030 2000 ) N ;
+    - wbs_dat_o[10] + NET wbs_dat_o[10] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 207230 2000 ) N ;
+    - wbs_dat_o[11] + NET wbs_dat_o[11] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 214130 2000 ) N ;
+    - wbs_dat_o[12] + NET wbs_dat_o[12] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 221030 2000 ) N ;
+    - wbs_dat_o[13] + NET wbs_dat_o[13] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 227930 2000 ) N ;
+    - wbs_dat_o[14] + NET wbs_dat_o[14] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 234830 2000 ) N ;
+    - wbs_dat_o[15] + NET wbs_dat_o[15] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 241730 2000 ) N ;
+    - wbs_dat_o[16] + NET wbs_dat_o[16] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 248630 2000 ) N ;
+    - wbs_dat_o[17] + NET wbs_dat_o[17] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 255530 2000 ) N ;
+    - wbs_dat_o[18] + NET wbs_dat_o[18] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 262430 2000 ) N ;
+    - wbs_dat_o[19] + NET wbs_dat_o[19] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 269330 2000 ) N ;
+    - wbs_dat_o[1] + NET wbs_dat_o[1] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 138230 2000 ) N ;
+    - wbs_dat_o[20] + NET wbs_dat_o[20] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 276230 2000 ) N ;
+    - wbs_dat_o[21] + NET wbs_dat_o[21] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 283130 2000 ) N ;
+    - wbs_dat_o[22] + NET wbs_dat_o[22] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 290030 2000 ) N ;
+    - wbs_dat_o[23] + NET wbs_dat_o[23] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 296930 2000 ) N ;
+    - wbs_dat_o[24] + NET wbs_dat_o[24] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 303830 2000 ) N ;
+    - wbs_dat_o[25] + NET wbs_dat_o[25] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 310730 2000 ) N ;
+    - wbs_dat_o[26] + NET wbs_dat_o[26] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 317630 2000 ) N ;
+    - wbs_dat_o[27] + NET wbs_dat_o[27] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 324530 2000 ) N ;
+    - wbs_dat_o[28] + NET wbs_dat_o[28] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 331430 2000 ) N ;
+    - wbs_dat_o[29] + NET wbs_dat_o[29] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 338330 2000 ) N ;
+    - wbs_dat_o[2] + NET wbs_dat_o[2] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 147430 2000 ) N ;
+    - wbs_dat_o[30] + NET wbs_dat_o[30] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 345230 2000 ) N ;
+    - wbs_dat_o[31] + NET wbs_dat_o[31] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 352130 2000 ) N ;
+    - wbs_dat_o[3] + NET wbs_dat_o[3] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 156630 2000 ) N ;
+    - wbs_dat_o[4] + NET wbs_dat_o[4] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 165830 2000 ) N ;
+    - wbs_dat_o[5] + NET wbs_dat_o[5] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 172730 2000 ) N ;
+    - wbs_dat_o[6] + NET wbs_dat_o[6] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 179630 2000 ) N ;
+    - wbs_dat_o[7] + NET wbs_dat_o[7] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 186530 2000 ) N ;
+    - wbs_dat_o[8] + NET wbs_dat_o[8] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 193430 2000 ) N ;
+    - wbs_dat_o[9] + NET wbs_dat_o[9] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 200330 2000 ) N ;
+    - wbs_sel_i[0] + NET wbs_sel_i[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 131330 2000 ) N ;
+    - wbs_sel_i[1] + NET wbs_sel_i[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 140530 2000 ) N ;
+    - wbs_sel_i[2] + NET wbs_sel_i[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 149730 2000 ) N ;
+    - wbs_sel_i[3] + NET wbs_sel_i[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 158930 2000 ) N ;
+    - wbs_stb_i + NET wbs_stb_i + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 119830 2000 ) N ;
+    - wbs_we_i + NET wbs_we_i + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 122130 2000 ) N ;
+END PINS
+NETS 142 ;
+    - Bias_comp1 ( PIN Bias_comp1 ) ( functional.NEUROMORPHIC_X1_inst Bias_comp1 ) + USE SIGNAL ;
+    - Bias_comp2 ( PIN Bias_comp2 ) ( functional.NEUROMORPHIC_X1_inst Bias_comp2 ) + USE SIGNAL ;
+    - Iref ( PIN Iref ) ( functional.NEUROMORPHIC_X1_inst Iref ) + USE SIGNAL ;
+    - Ramp ( PIN Ramp ) ( functional.NEUROMORPHIC_X1_inst Ramp ) + USE SIGNAL ;
+    - VCC_read ( PIN VCC_read ) + USE SIGNAL ;
+    - VCC_reset ( PIN VCC_reset ) + USE SIGNAL ;
+    - VCC_set ( PIN VCC_set ) + USE SIGNAL ;
+    - VCC_wl_read ( PIN VCC_wl_read ) + USE SIGNAL ;
+    - VCC_wl_reset ( PIN VCC_wl_reset ) + USE SIGNAL ;
+    - VCC_wl_set ( PIN VCC_wl_set ) + USE SIGNAL ;
+    - VDDA ( PIN VDDA ) ( functional.NEUROMORPHIC_X1_inst VDDA ) + USE SIGNAL ;
+    - VDDC ( PIN VDDC ) ( functional.NEUROMORPHIC_X1_inst VDDC ) + USE SIGNAL ;
+    - VSS ( PIN VSS ) ( functional.NEUROMORPHIC_X1_inst VSS ) + USE SIGNAL ;
+    - Vbias ( PIN Vbias ) ( functional.NEUROMORPHIC_X1_inst Vbias ) + USE SIGNAL ;
+    - Vcc_Body ( PIN Vcc_Body ) ( functional.NEUROMORPHIC_X1_inst Vcc_Body ) + USE SIGNAL ;
+    - Vcc_L ( PIN Vcc_L ) ( functional.NEUROMORPHIC_X1_inst Vcc_L ) + USE SIGNAL ;
+    - Vcomp ( PIN Vcomp ) ( functional.NEUROMORPHIC_X1_inst Vcomp ) + USE SIGNAL ;
+    - _00_ ( _21_ A ) ( _17_ X ) + USE SIGNAL ;
+    - _01_ ( _21_ B ) ( _18_ X ) + USE SIGNAL ;
+    - _02_ ( _21_ C ) ( _19_ X ) + USE SIGNAL ;
+    - _03_ ( _21_ D ) ( _20_ X ) + USE SIGNAL ;
+    - _04_ ( _29_ A ) ( _21_ X ) + USE SIGNAL ;
+    - _05_ ( _29_ B ) ( _22_ Y ) + USE SIGNAL ;
+    - _06_ ( _29_ C ) ( _23_ X ) + USE SIGNAL ;
+    - _07_ ( _28_ A ) ( _24_ X ) + USE SIGNAL ;
+    - _08_ ( _28_ B ) ( _25_ X ) + USE SIGNAL ;
+    - _09_ ( _28_ C ) ( _26_ X ) + USE SIGNAL ;
+    - _10_ ( _28_ D ) ( _27_ X ) + USE SIGNAL ;
+    - _11_ ( _29_ D ) ( _28_ X ) + USE SIGNAL ;
+    - _12_ ( _30_ LO ) + USE SIGNAL ;
+    - _13_ ( functional.NEUROMORPHIC_X1_inst ScanInCC ) ( _31_ LO ) + USE SIGNAL ;
+    - _14_ ( functional.NEUROMORPHIC_X1_inst ScanInDL ) ( _32_ LO ) + USE SIGNAL ;
+    - _15_ ( functional.NEUROMORPHIC_X1_inst ScanInDR ) ( _33_ LO ) + USE SIGNAL ;
+    - _16_ ( functional.NEUROMORPHIC_X1_inst TM ) ( _34_ LO ) + USE SIGNAL ;
+    - functional.EN ( functional.NEUROMORPHIC_X1_inst EN ) ( _29_ Y ) + USE SIGNAL ;
+    - functional.ScanOutCC ( functional.NEUROMORPHIC_X1_inst ScanOutCC ) + USE SIGNAL ;
+    - wb_clk_i ( PIN wb_clk_i ) + USE SIGNAL ;
+    - wb_rst_i ( PIN wb_rst_i ) + USE SIGNAL ;
+    - wbs_ack_o ( PIN wbs_ack_o ) + USE SIGNAL ;
+    - wbs_adr_i[0] ( PIN wbs_adr_i[0] ) ( functional.NEUROMORPHIC_X1_inst AD[0] ) ( _23_ B ) + USE SIGNAL ;
+    - wbs_adr_i[10] ( PIN wbs_adr_i[10] ) ( functional.NEUROMORPHIC_X1_inst AD[10] ) ( _24_ D ) + USE SIGNAL ;
+    - wbs_adr_i[11] ( PIN wbs_adr_i[11] ) ( functional.NEUROMORPHIC_X1_inst AD[11] ) ( _24_ C ) + USE SIGNAL ;
+    - wbs_adr_i[12] ( PIN wbs_adr_i[12] ) ( functional.NEUROMORPHIC_X1_inst AD[12] ) ( _26_ B ) + USE SIGNAL ;
+    - wbs_adr_i[13] ( PIN wbs_adr_i[13] ) ( functional.NEUROMORPHIC_X1_inst AD[13] ) ( _26_ A ) + USE SIGNAL ;
+    - wbs_adr_i[14] ( PIN wbs_adr_i[14] ) ( functional.NEUROMORPHIC_X1_inst AD[14] ) ( _26_ D ) + USE SIGNAL ;
+    - wbs_adr_i[15] ( PIN wbs_adr_i[15] ) ( functional.NEUROMORPHIC_X1_inst AD[15] ) ( _26_ C ) + USE SIGNAL ;
+    - wbs_adr_i[16] ( PIN wbs_adr_i[16] ) ( functional.NEUROMORPHIC_X1_inst AD[16] ) ( _27_ B ) + USE SIGNAL ;
+    - wbs_adr_i[17] ( PIN wbs_adr_i[17] ) ( functional.NEUROMORPHIC_X1_inst AD[17] ) ( _27_ A ) + USE SIGNAL ;
+    - wbs_adr_i[18] ( PIN wbs_adr_i[18] ) ( functional.NEUROMORPHIC_X1_inst AD[18] ) ( _27_ D ) + USE SIGNAL ;
+    - wbs_adr_i[19] ( PIN wbs_adr_i[19] ) ( functional.NEUROMORPHIC_X1_inst AD[19] ) ( _27_ C ) + USE SIGNAL ;
+    - wbs_adr_i[1] ( PIN wbs_adr_i[1] ) ( functional.NEUROMORPHIC_X1_inst AD[1] ) ( _23_ A ) + USE SIGNAL ;
+    - wbs_adr_i[20] ( PIN wbs_adr_i[20] ) ( functional.NEUROMORPHIC_X1_inst AD[20] ) ( _18_ B ) + USE SIGNAL ;
+    - wbs_adr_i[21] ( PIN wbs_adr_i[21] ) ( functional.NEUROMORPHIC_X1_inst AD[21] ) ( _18_ A ) + USE SIGNAL ;
+    - wbs_adr_i[22] ( PIN wbs_adr_i[22] ) ( functional.NEUROMORPHIC_X1_inst AD[22] ) ( _18_ D ) + USE SIGNAL ;
+    - wbs_adr_i[23] ( PIN wbs_adr_i[23] ) ( functional.NEUROMORPHIC_X1_inst AD[23] ) ( _18_ C ) + USE SIGNAL ;
+    - wbs_adr_i[24] ( PIN wbs_adr_i[24] ) ( functional.NEUROMORPHIC_X1_inst AD[24] ) ( _17_ B ) + USE SIGNAL ;
+    - wbs_adr_i[25] ( PIN wbs_adr_i[25] ) ( functional.NEUROMORPHIC_X1_inst AD[25] ) ( _17_ A ) + USE SIGNAL ;
+    - wbs_adr_i[26] ( PIN wbs_adr_i[26] ) ( functional.NEUROMORPHIC_X1_inst AD[26] ) ( _17_ D ) + USE SIGNAL ;
+    - wbs_adr_i[27] ( PIN wbs_adr_i[27] ) ( functional.NEUROMORPHIC_X1_inst AD[27] ) ( _17_ C ) + USE SIGNAL ;
+    - wbs_adr_i[28] ( PIN wbs_adr_i[28] ) ( functional.NEUROMORPHIC_X1_inst AD[28] ) ( _20_ D_N ) + USE SIGNAL ;
+    - wbs_adr_i[29] ( PIN wbs_adr_i[29] ) ( functional.NEUROMORPHIC_X1_inst AD[29] ) ( _20_ C_N ) + USE SIGNAL ;
+    - wbs_adr_i[2] ( PIN wbs_adr_i[2] ) ( functional.NEUROMORPHIC_X1_inst AD[2] ) ( _23_ D_N ) + USE SIGNAL ;
+    - wbs_adr_i[30] ( PIN wbs_adr_i[30] ) ( functional.NEUROMORPHIC_X1_inst AD[30] ) ( _20_ B ) + USE SIGNAL ;
+    - wbs_adr_i[31] ( PIN wbs_adr_i[31] ) ( functional.NEUROMORPHIC_X1_inst AD[31] ) ( _20_ A ) + USE SIGNAL ;
+    - wbs_adr_i[3] ( PIN wbs_adr_i[3] ) ( functional.NEUROMORPHIC_X1_inst AD[3] ) ( _23_ C_N ) + USE SIGNAL ;
+    - wbs_adr_i[4] ( PIN wbs_adr_i[4] ) ( functional.NEUROMORPHIC_X1_inst AD[4] ) ( _25_ B ) + USE SIGNAL ;
+    - wbs_adr_i[5] ( PIN wbs_adr_i[5] ) ( functional.NEUROMORPHIC_X1_inst AD[5] ) ( _25_ A ) + USE SIGNAL ;
+    - wbs_adr_i[6] ( PIN wbs_adr_i[6] ) ( functional.NEUROMORPHIC_X1_inst AD[6] ) ( _25_ D ) + USE SIGNAL ;
+    - wbs_adr_i[7] ( PIN wbs_adr_i[7] ) ( functional.NEUROMORPHIC_X1_inst AD[7] ) ( _25_ C ) + USE SIGNAL ;
+    - wbs_adr_i[8] ( PIN wbs_adr_i[8] ) ( functional.NEUROMORPHIC_X1_inst AD[8] ) ( _24_ B ) + USE SIGNAL ;
+    - wbs_adr_i[9] ( PIN wbs_adr_i[9] ) ( functional.NEUROMORPHIC_X1_inst AD[9] ) ( _24_ A ) + USE SIGNAL ;
+    - wbs_cyc_i ( PIN wbs_cyc_i ) ( _22_ A ) + USE SIGNAL ;
+    - wbs_dat_i[0] ( PIN wbs_dat_i[0] ) ( functional.NEUROMORPHIC_X1_inst DI[0] ) + USE SIGNAL ;
+    - wbs_dat_i[10] ( PIN wbs_dat_i[10] ) ( functional.NEUROMORPHIC_X1_inst DI[10] ) + USE SIGNAL ;
+    - wbs_dat_i[11] ( PIN wbs_dat_i[11] ) ( functional.NEUROMORPHIC_X1_inst DI[11] ) + USE SIGNAL ;
+    - wbs_dat_i[12] ( PIN wbs_dat_i[12] ) ( functional.NEUROMORPHIC_X1_inst DI[12] ) + USE SIGNAL ;
+    - wbs_dat_i[13] ( PIN wbs_dat_i[13] ) ( functional.NEUROMORPHIC_X1_inst DI[13] ) + USE SIGNAL ;
+    - wbs_dat_i[14] ( PIN wbs_dat_i[14] ) ( functional.NEUROMORPHIC_X1_inst DI[14] ) + USE SIGNAL ;
+    - wbs_dat_i[15] ( PIN wbs_dat_i[15] ) ( functional.NEUROMORPHIC_X1_inst DI[15] ) + USE SIGNAL ;
+    - wbs_dat_i[16] ( PIN wbs_dat_i[16] ) ( functional.NEUROMORPHIC_X1_inst DI[16] ) + USE SIGNAL ;
+    - wbs_dat_i[17] ( PIN wbs_dat_i[17] ) ( functional.NEUROMORPHIC_X1_inst DI[17] ) + USE SIGNAL ;
+    - wbs_dat_i[18] ( PIN wbs_dat_i[18] ) ( functional.NEUROMORPHIC_X1_inst DI[18] ) + USE SIGNAL ;
+    - wbs_dat_i[19] ( PIN wbs_dat_i[19] ) ( functional.NEUROMORPHIC_X1_inst DI[19] ) + USE SIGNAL ;
+    - wbs_dat_i[1] ( PIN wbs_dat_i[1] ) ( functional.NEUROMORPHIC_X1_inst DI[1] ) + USE SIGNAL ;
+    - wbs_dat_i[20] ( PIN wbs_dat_i[20] ) ( functional.NEUROMORPHIC_X1_inst DI[20] ) + USE SIGNAL ;
+    - wbs_dat_i[21] ( PIN wbs_dat_i[21] ) ( functional.NEUROMORPHIC_X1_inst DI[21] ) + USE SIGNAL ;
+    - wbs_dat_i[22] ( PIN wbs_dat_i[22] ) ( functional.NEUROMORPHIC_X1_inst DI[22] ) + USE SIGNAL ;
+    - wbs_dat_i[23] ( PIN wbs_dat_i[23] ) ( functional.NEUROMORPHIC_X1_inst DI[23] ) + USE SIGNAL ;
+    - wbs_dat_i[24] ( PIN wbs_dat_i[24] ) ( functional.NEUROMORPHIC_X1_inst DI[24] ) + USE SIGNAL ;
+    - wbs_dat_i[25] ( PIN wbs_dat_i[25] ) ( functional.NEUROMORPHIC_X1_inst DI[25] ) + USE SIGNAL ;
+    - wbs_dat_i[26] ( PIN wbs_dat_i[26] ) ( functional.NEUROMORPHIC_X1_inst DI[26] ) + USE SIGNAL ;
+    - wbs_dat_i[27] ( PIN wbs_dat_i[27] ) ( functional.NEUROMORPHIC_X1_inst DI[27] ) + USE SIGNAL ;
+    - wbs_dat_i[28] ( PIN wbs_dat_i[28] ) ( functional.NEUROMORPHIC_X1_inst DI[28] ) + USE SIGNAL ;
+    - wbs_dat_i[29] ( PIN wbs_dat_i[29] ) ( functional.NEUROMORPHIC_X1_inst DI[29] ) + USE SIGNAL ;
+    - wbs_dat_i[2] ( PIN wbs_dat_i[2] ) ( functional.NEUROMORPHIC_X1_inst DI[2] ) + USE SIGNAL ;
+    - wbs_dat_i[30] ( PIN wbs_dat_i[30] ) ( functional.NEUROMORPHIC_X1_inst DI[30] ) + USE SIGNAL ;
+    - wbs_dat_i[31] ( PIN wbs_dat_i[31] ) ( functional.NEUROMORPHIC_X1_inst DI[31] ) + USE SIGNAL ;
+    - wbs_dat_i[3] ( PIN wbs_dat_i[3] ) ( functional.NEUROMORPHIC_X1_inst DI[3] ) + USE SIGNAL ;
+    - wbs_dat_i[4] ( PIN wbs_dat_i[4] ) ( functional.NEUROMORPHIC_X1_inst DI[4] ) + USE SIGNAL ;
+    - wbs_dat_i[5] ( PIN wbs_dat_i[5] ) ( functional.NEUROMORPHIC_X1_inst DI[5] ) + USE SIGNAL ;
+    - wbs_dat_i[6] ( PIN wbs_dat_i[6] ) ( functional.NEUROMORPHIC_X1_inst DI[6] ) + USE SIGNAL ;
+    - wbs_dat_i[7] ( PIN wbs_dat_i[7] ) ( functional.NEUROMORPHIC_X1_inst DI[7] ) + USE SIGNAL ;
+    - wbs_dat_i[8] ( PIN wbs_dat_i[8] ) ( functional.NEUROMORPHIC_X1_inst DI[8] ) + USE SIGNAL ;
+    - wbs_dat_i[9] ( PIN wbs_dat_i[9] ) ( functional.NEUROMORPHIC_X1_inst DI[9] ) + USE SIGNAL ;
+    - wbs_dat_o[0] ( PIN wbs_dat_o[0] ) ( functional.NEUROMORPHIC_X1_inst DO[0] ) + USE SIGNAL ;
+    - wbs_dat_o[10] ( PIN wbs_dat_o[10] ) ( functional.NEUROMORPHIC_X1_inst DO[10] ) + USE SIGNAL ;
+    - wbs_dat_o[11] ( PIN wbs_dat_o[11] ) ( functional.NEUROMORPHIC_X1_inst DO[11] ) + USE SIGNAL ;
+    - wbs_dat_o[12] ( PIN wbs_dat_o[12] ) ( functional.NEUROMORPHIC_X1_inst DO[12] ) + USE SIGNAL ;
+    - wbs_dat_o[13] ( PIN wbs_dat_o[13] ) ( functional.NEUROMORPHIC_X1_inst DO[13] ) + USE SIGNAL ;
+    - wbs_dat_o[14] ( PIN wbs_dat_o[14] ) ( functional.NEUROMORPHIC_X1_inst DO[14] ) + USE SIGNAL ;
+    - wbs_dat_o[15] ( PIN wbs_dat_o[15] ) ( functional.NEUROMORPHIC_X1_inst DO[15] ) + USE SIGNAL ;
+    - wbs_dat_o[16] ( PIN wbs_dat_o[16] ) ( functional.NEUROMORPHIC_X1_inst DO[16] ) + USE SIGNAL ;
+    - wbs_dat_o[17] ( PIN wbs_dat_o[17] ) ( functional.NEUROMORPHIC_X1_inst DO[17] ) + USE SIGNAL ;
+    - wbs_dat_o[18] ( PIN wbs_dat_o[18] ) ( functional.NEUROMORPHIC_X1_inst DO[18] ) + USE SIGNAL ;
+    - wbs_dat_o[19] ( PIN wbs_dat_o[19] ) ( functional.NEUROMORPHIC_X1_inst DO[19] ) + USE SIGNAL ;
+    - wbs_dat_o[1] ( PIN wbs_dat_o[1] ) ( functional.NEUROMORPHIC_X1_inst DO[1] ) + USE SIGNAL ;
+    - wbs_dat_o[20] ( PIN wbs_dat_o[20] ) ( functional.NEUROMORPHIC_X1_inst DO[20] ) + USE SIGNAL ;
+    - wbs_dat_o[21] ( PIN wbs_dat_o[21] ) ( functional.NEUROMORPHIC_X1_inst DO[21] ) + USE SIGNAL ;
+    - wbs_dat_o[22] ( PIN wbs_dat_o[22] ) ( functional.NEUROMORPHIC_X1_inst DO[22] ) + USE SIGNAL ;
+    - wbs_dat_o[23] ( PIN wbs_dat_o[23] ) ( functional.NEUROMORPHIC_X1_inst DO[23] ) + USE SIGNAL ;
+    - wbs_dat_o[24] ( PIN wbs_dat_o[24] ) ( functional.NEUROMORPHIC_X1_inst DO[24] ) + USE SIGNAL ;
+    - wbs_dat_o[25] ( PIN wbs_dat_o[25] ) ( functional.NEUROMORPHIC_X1_inst DO[25] ) + USE SIGNAL ;
+    - wbs_dat_o[26] ( PIN wbs_dat_o[26] ) ( functional.NEUROMORPHIC_X1_inst DO[26] ) + USE SIGNAL ;
+    - wbs_dat_o[27] ( PIN wbs_dat_o[27] ) ( functional.NEUROMORPHIC_X1_inst DO[27] ) + USE SIGNAL ;
+    - wbs_dat_o[28] ( PIN wbs_dat_o[28] ) ( functional.NEUROMORPHIC_X1_inst DO[28] ) + USE SIGNAL ;
+    - wbs_dat_o[29] ( PIN wbs_dat_o[29] ) ( functional.NEUROMORPHIC_X1_inst DO[29] ) + USE SIGNAL ;
+    - wbs_dat_o[2] ( PIN wbs_dat_o[2] ) ( functional.NEUROMORPHIC_X1_inst DO[2] ) + USE SIGNAL ;
+    - wbs_dat_o[30] ( PIN wbs_dat_o[30] ) ( functional.NEUROMORPHIC_X1_inst DO[30] ) + USE SIGNAL ;
+    - wbs_dat_o[31] ( PIN wbs_dat_o[31] ) ( functional.NEUROMORPHIC_X1_inst DO[31] ) + USE SIGNAL ;
+    - wbs_dat_o[3] ( PIN wbs_dat_o[3] ) ( functional.NEUROMORPHIC_X1_inst DO[3] ) + USE SIGNAL ;
+    - wbs_dat_o[4] ( PIN wbs_dat_o[4] ) ( functional.NEUROMORPHIC_X1_inst DO[4] ) + USE SIGNAL ;
+    - wbs_dat_o[5] ( PIN wbs_dat_o[5] ) ( functional.NEUROMORPHIC_X1_inst DO[5] ) + USE SIGNAL ;
+    - wbs_dat_o[6] ( PIN wbs_dat_o[6] ) ( functional.NEUROMORPHIC_X1_inst DO[6] ) + USE SIGNAL ;
+    - wbs_dat_o[7] ( PIN wbs_dat_o[7] ) ( functional.NEUROMORPHIC_X1_inst DO[7] ) + USE SIGNAL ;
+    - wbs_dat_o[8] ( PIN wbs_dat_o[8] ) ( functional.NEUROMORPHIC_X1_inst DO[8] ) + USE SIGNAL ;
+    - wbs_dat_o[9] ( PIN wbs_dat_o[9] ) ( functional.NEUROMORPHIC_X1_inst DO[9] ) + USE SIGNAL ;
+    - wbs_sel_i[0] ( PIN wbs_sel_i[0] ) ( functional.NEUROMORPHIC_X1_inst SEL[0] ) ( _19_ A ) + USE SIGNAL ;
+    - wbs_sel_i[1] ( PIN wbs_sel_i[1] ) ( functional.NEUROMORPHIC_X1_inst SEL[1] ) ( _19_ D_N ) + USE SIGNAL ;
+    - wbs_sel_i[2] ( PIN wbs_sel_i[2] ) ( functional.NEUROMORPHIC_X1_inst SEL[2] ) ( _19_ C ) + USE SIGNAL ;
+    - wbs_sel_i[3] ( PIN wbs_sel_i[3] ) ( functional.NEUROMORPHIC_X1_inst SEL[3] ) ( _19_ B ) + USE SIGNAL ;
+    - wbs_stb_i ( PIN wbs_stb_i ) ( _22_ B ) + USE SIGNAL ;
+    - wbs_we_i ( PIN wbs_we_i ) ( functional.NEUROMORPHIC_X1_inst R_WB ) + USE SIGNAL ;
+END NETS
+END DESIGN
